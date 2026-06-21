@@ -53,21 +53,19 @@ function splitLoot()
     {
         document.getElementById("validParty").innerHTML = "Party size needs to be at least 1.";
         document.getElementById("validParty").classList.remove("hidden");
-        document.getElementById("validParty").classList.add("hidden");
         for (let el of document.getElementsByClassName("partyLoot")) {
-            el.classList.remove("hidden");
+            el.classList.add("hidden");
         }
     } else 
     {
         document.getElementById("validParty").classList.add("hidden");
         for (let el of document.getElementsByClassName("partyLoot")) {
-            el.classList.add("hidden");
+            el.classList.remove("hidden");
         }
+        renderLoot();
     }
 
-    if (party)
-
-    renderLoot();
+    
 }
 
 function renderLoot()
@@ -145,4 +143,6 @@ function renderLoot()
 //button listeners
 document.getElementById("submit").addEventListener("click", submitLoot);
 document.getElementById("splitLoot").addEventListener("click", splitLoot);
+
+//every change to "party" will call splitLoot
 document.getElementById("party").addEventListener("input", () => splitLoot());
