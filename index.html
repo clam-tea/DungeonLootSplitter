@@ -25,30 +25,50 @@
 
             <section class="panel">
                 <h2>Party Setup</h2>
-                <input type="number" id="party" placeholder="Party Members" min="1">
+                <input type="number" id="party" placeholder="Party Members" min="1" step="1">
                 <p class="valid" id="validParty"></p>
             </section>
 
             <section class="panel">
                 <h2>Add Loot</h2>
                 <input type="text" id="lootName" placeholder="Loot Name">
-                <input type="number" id="lootValue" placeholder="Loot Value" min="1">
+                <input type="number" id="lootValue" placeholder="Loot Value" min="1" step="0.01">
+                <input type = "number" id="lootQuant" placeholder="Loot Quantity" min="1" step="1">
                 <p class="valid" id="validAdd"></p>
                 <button type="button" id="submit">Add Loot</button>
             </section>
 
             <section class="panel">
                 <h2>Loot List</h2>
-                <ul id="lootList"><li>Add loot first.</li></ul>
+
+                
+               
+
+                <div class="loot-table">
+                    <div class="loot-header">Name</div>
+                    <div class="loot-header">Value</div>
+                    <div class="loot-header">Quantity</div>
+                    <div class="loot-header">Remove</div>
+
+                    <div id="lootRows"></div>
+                </div>
+
+                <div id="noLootMessage">No loot added.</div>
+
+                <br>
+
+                <div class="total-row">
+                    Total Loot: $<span class="total" id="totalLoot">0.00</span>
+                </div>
+                <!-- <h2>Loot List</h2>
+                <ul id="lootList"><li>Add loot first.</li></ul> -->
             </section>
 
             <section class="panel">
                 <h2>Split Loot</h2>
                 <button type="button" id="splitLoot">Split Loot</button>
-                <h3>Total Loot</h3>
-                <p class="total" id="totalLoot">0</p>
-                <h3>Loot per Party Member</h3>
-                <p class="total" id="perLoot">Party size needs to be at least 1.</p>
+                <h3 class="partyLoot">Loot per Party Member</h3>
+                <p class="partyLoot total" id="perLoot">Party size needs to be at least 1.</p>
             </section>
 
             <br>

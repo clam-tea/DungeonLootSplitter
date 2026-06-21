@@ -65,8 +65,37 @@ button:hover {
     background-color:rgb(255, 255, 255);
 }
 
-.total {
-    font-size: 20px;
+.hidden {
+    display: none;
+}
+
+#lootRows {
+    display: contents;
+}
+
+.loot-table {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.loot-header {
+    font-weight: 600;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.25rem;
+}
+
+.loot-row {
+    display: contents;
+}
+
+.loot-cell {
+    padding: 0.25rem 0;
+}
+
+.loot-cell button {
+    width: 100%;
 }
 
 @media (min-width: 768px) {
