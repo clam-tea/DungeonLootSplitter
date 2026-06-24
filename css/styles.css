@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color:rgb(208, 239, 255);
+    font-family: "SN Pro", sans-serif;
+}
+
+h1 {
+    font-family: "Limelight", sans-serif;
+}
+
+h2 {
+    font-family: "Story Script", sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: "SN Pro", sans-serif;
+}
+
+input {
+    font-family: "SN Pro", sans-serif;
+    border-radius: 8px;
+}
+
+ul {
+    font-family: "SN Pro", sans-serif;
+}
+
+li {
+    font-family: "SN Pro", sans-serif;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+button {
+    font-family: "SN Pro", sans-serif;
+    background-color: rgb(198, 226, 250);
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(156, 177, 197);
+}
+
+.valid {
+    color: red;
+}
+
+.panel {
+    border: 10px solid rgb(123, 166, 174);
+    border-radius: 40px;
+    padding: 50px;
+    background-color:rgb(255, 255, 255);
+}
+
+.hidden {
+    display: none;
+}
+
+#lootName {
+    width: 35%;
+}
+
+#lootValue {
+    width: 22.5%;
+}
+
+#lootQuant {
+    width: 22.5%;
+}
+
+#submit {
+    width: 15%;
+}
+
+
+#lootRows {
+    display: contents;
+}
+
+.loot-table {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.loot-header {
+    font-weight: 600;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.25rem;
+}
+
+.loot-row {
+    display: contents;
+}
+
+.loot-cell {
+    padding: 0.25rem 0;
+}
+
+.loot-cell button {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .reflection {
+        grid-column: span 2;
+    }
+}
